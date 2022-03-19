@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  z-index: 1;
+    filter: drop-shadow(0px 4px 1px rgb(11, 189, 11));
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  background-color: darkgreen;
+  width: 100%;
+  height: 70px;
+}
+#slogan{
+left: 48px;
+top: 42px;
+position: absolute;
+color: white;
+font-family: 'Times New Roman', Times, serif ;
+font-style: italic;
+text-transform: capitalize;
+}
+#letitre {
+    font-family: tahoma;
+  position: relative;
+  top: 8px;
+  color: white;
+}
+#logo {
+  left: 0;
+  position: absolute;
+  width: 70px;
+}
+
+article {
+  position: relative;
+  top: 10px;
+  background-color: white;
+  border: 1px solid;
+  border-right: none ;
+  padding: 7px;
+  height: 168px;
+  overflow-y: scroll;
+}
+article:nth-child(1){
+  margin-left: 10px;
+}
+article:nth-child(2){
+  border-right:1px solid black;
+}
+.up_main {
+  display: flex;
+}
+
+#papier {
+  top: 3px;
+  width: 210px;
+  position: relative;
+}
+#textarea {
+  font-style: italic;
+  line-height: 16px;
+  color: white;
+  font-family: serif;
+  border: none;
+  width: 185px;
+  background-color: transparent;
+  position: absolute;
+  top: 103px;
+  right: 12px;
+  resize: none;
+  outline: none;
+}
+#tiret{
+    animation-name: tiret;
+      animation-timing-function: ease-in-out;
+      animation-duration: .5s;
+      animation-iteration-count: infinite;
+}
+@keyframes tiret {
+    
+        from {opacity: 0;}
+        to {opacity: 1;}
+    
+}
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+* a:visited{
+  color: rgb(148, 228, 148);
+}
+* a:active{
+  color: yellow;
+}
+nav{
+  
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: Arial, tahoma;
+  text-transform: uppercase;
+    top: 50px;
+  position: absolute;
+}
+.menu:first-child{border-left:1px solid white ; padding-left: 7px;}
+.menu{
+    text-decoration: none;
+    color: white;
+    padding: 0 7px 0 0;
+    border-right: 1px solid white;
+}
+.button-effacer{
+  width: 60px;
+  background-color: transparent;
+  color: white;
+border: 1px solid white;
+border-right: none;
+  position: absolute;
+  right: 142px;
+top:238px;
+}
+.button-envoyer{
+color: white;
+border: 1px solid white;
+background-color: transparent;
+width: 130px;
+position: absolute;
+right: 13px;
+top:238px;
+}
+.button_area:hover{
+  color: darkgreen;
+  background-color: rgb(148, 228, 148);
+}
+#button_flex{
+border: 0 0 32px 32px;
+overflow:hidden;
+color: white;
+padding: 20px 0 0 2px;
+right: 3px;
+top: 2px;
+position: absolute;
+border-radius: 12px;
+border: none;
+background-color: green;
+line-height: 5px;
+width: 90px;
+height: 65px;
+transition-timing-function: ease-in-out;
+transition-duration: .1s;
+}
+
+#button_flex:hover .lien_hypertext_drop{
+opacity: 1;
+}
+
+.lien_hypertext_drop{
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: Arial, tahoma;
+  text-transform: uppercase;
+display: inline-block;
+position: relative;
+width: 100px;
+top: -40px;
+right: 6px;
+opacity: 0;
+background-color: green;
+border-bottom: 1px solid white;
+}
+@media screen and (min-width: 720px){
+#button_flex{display: none;}
+}
+@media screen and (max-width: 720px) {
+nav{display:none;}
+#letitre{top: 15px;}
+}
+ul>li,.lien_hypertext_drop{
+text-decoration: none;
+list-style-type: none;
+color: white;
+line-height: 23px;
+}
+#float_gif,#the_logo_article{
+  margin: 0 6px 0 0;
+  border-radius: 3px;
+  border: 1px;
+  float: left;
+  width: 70px;
+  height: auto;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 50px;
+}
+#the_logo_article{
+  width:100px;
+}
+article p{
+  cursor:help;
+  font-family: serif,'Times New Roman', Times;
+  font-size: 15px;
+}
+article p::first-letter {
+  padding: 7px 7px 0 0;
+  float: left;
+  font-weight: bolder;
+  font-size: 45px;
+
+}
+* button{
+  cursor: pointer;
+}
+#close {
+  display: none;
+}
+#show:target #close {
+  display: inline-block;
+}
+#show:target #open {
+  display: none;
+}
